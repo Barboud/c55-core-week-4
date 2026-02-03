@@ -3,7 +3,7 @@ export const transactions = [
   {
     id: 1,
     type: 'income',
-    category: 'salary',
+    category: 'Salary',
     amount: 3000,
     description: 'Monthly salary',
     date: '2025-01-02',
@@ -11,7 +11,7 @@ export const transactions = [
   {
     id: 2,
     type: 'expense',
-    category: 'rent',
+    category: 'Rent',
     amount: 1200,
     description: 'Monthly rent',
     date: '2025-01-05',
@@ -19,7 +19,7 @@ export const transactions = [
   {
     id: 3,
     type: 'expense',
-    category: 'groceries',
+    category: 'Groceries',
     amount: 300,
     description: 'food',
     date: '2025-01-12',
@@ -27,7 +27,7 @@ export const transactions = [
   {
     id: 4,
     type: 'income',
-    category: 'freelance',
+    category: 'Freelance',
     amount: 500,
     description: 'side-income',
     date: '2025-01-15',
@@ -35,7 +35,7 @@ export const transactions = [
   {
     id: 5,
     type: 'expense',
-    category: 'utilities',
+    category: 'Utilities',
     amount: 150,
     description: 'bills',
     date: '2025-01-20',
@@ -43,7 +43,7 @@ export const transactions = [
   {
     id: 6,
     type: 'income',
-    category: 'freelance',
+    category: 'Freelance',
     amount: 150,
     description: 'side-income',
     date: '2025-01-25',
