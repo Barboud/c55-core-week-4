@@ -2,10 +2,10 @@ import { transactions } from './data.js';
 import chalk from 'chalk';
 
 export function addTransaction(transaction) {
-  if (!transaction[0].id) {
-    transaction[0].id = transactions.length + 1;
+  if (!transaction.id) {
+    transaction.id = transactions.length + 1;
   }
-  transactions.push(...transaction);
+  transactions.push(transaction);
   return transactions;
 }
 
@@ -44,17 +44,15 @@ export function getTransactionsByCategory(category) {
 }
 
 export function getLargestExpense() {
-  const filteredTransactions = getTransactionsByType('expense');
-  let largestTransaction = [];
-  let largestExpense = null;
-  for (const filteredTransaction of filteredTransactions) {
-    if (filteredTransaction.amount > largestExpense) {
-      largestExpense = filteredTransaction.amount;
-      largestTransaction.pop(filteredTransaction);
-      largestTransaction.push(filteredTransaction);
+  let largest = null;
+  for (const transaction of transactions) {
+    if (transaction.type === 'expense') {
+      if (largest === null || transaction.amount > largest.amount) {
+        largest = transaction;
+      }
     }
   }
-  return largestTransaction;
+  return largest;
 }
 
 export function printAllTransactions() {
